@@ -1,0 +1,19 @@
+spring:
+  jmx:
+    enabled: false
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    password: 123456
+    username: postgres
+    url: jdbc:postgresql://localhost/postgres
+    driver-class-name: org.postgresql.Driver
+  main:
+    allow-bean-definition-overriding: true
