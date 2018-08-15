@@ -1,8 +1,8 @@
 server:
-  port: 8089
+  port: ${saar.user_service.port}
 spring:
   application:
-    name: users-service
+    name: ${saar.user_service.service.name}
   jmx:
     enabled: false
   h2:
@@ -15,9 +15,9 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    password: 123456
-    username: postgres
-    url: jdbc:postgresql://localhost/postgres
+    password: ${saar.user_service.postgre.password}
+    username: ${saar.user_service.postgre.username}
+    url: ${saar.user_service.postgre.url}
     driver-class-name: org.postgresql.Driver
   main:
     allow-bean-definition-overriding: true

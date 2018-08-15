@@ -1,5 +1,7 @@
 server:
-  port: 8088
+  port: ${saar.orders_service.port}
 spring:
   application:
-    name: orders-service
+    name: ${saar.orders_service.service.name}
+  data:
+    mongodb.uri: ${saar.orders_service.mongodb.uri}

@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8761}
+  port: ${saar.eureka.port}
 
 eureka:
   client:
