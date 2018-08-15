@@ -7,6 +7,8 @@
     <bytecodeTargetLevel>
       <module name="eureka_server_main" target="1.8" />
       <module name="eureka_server_test" target="1.8" />
+      <module name="orders_service_main" target="1.8" />
+      <module name="orders_service_test" target="1.8" />
       <module name="spring_micro_services_main" target="1.8" />
       <module name="spring_micro_services_test" target="1.8" />
       <module name="users_main" target="1.8" />

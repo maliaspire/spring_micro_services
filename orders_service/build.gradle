@@ -1,0 +1,41 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.3.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    springCloudVersion = 'Finchley.SR1'
+}
+
+dependencies {
+    compileOnly "org.projectlombok:lombok:1.18.2"
+    compile "org.springframework.boot:spring-boot-starter-data-mongodb"
+    compile "org.springframework.boot:spring-boot-starter-web:2.0.4.RELEASE"
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client"
+    compile "io.projectreactor:reactor-core:3.1.8.RELEASE"
+    compile group: 'org.mongodb', name: 'mongo-java-driver', version: '3.8.0'
+
+}
+
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

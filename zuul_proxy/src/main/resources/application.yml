@@ -14,3 +14,6 @@ zuul:
     usersService:
       path: /users-service/**
       serviceId: USERS-SERVICE
+    ordersService:
+      path: /orders-service/**
+      serviceId: ORDERS-SERVICE

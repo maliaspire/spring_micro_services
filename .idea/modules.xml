@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_server.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_server.iml" group="eureka_server" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_main.iml" group="eureka_server" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_test.iml" group="eureka_server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/orders_service.iml" filepath="$PROJECT_DIR$/.idea/modules/orders_service.iml" group="orders_service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/orders_service/orders_service_main.iml" filepath="$PROJECT_DIR$/.idea/modules/orders_service/orders_service_main.iml" group="orders_service" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/orders_service/orders_service_test.iml" filepath="$PROJECT_DIR$/.idea/modules/orders_service/orders_service_test.iml" group="orders_service" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring_micro_services.iml" filepath="$PROJECT_DIR$/.idea/modules/spring_micro_services.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/users.iml" filepath="$PROJECT_DIR$/.idea/modules/users.iml" group="users" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/users/users_main.iml" filepath="$PROJECT_DIR$/.idea/modules/users/users_main.iml" group="users" />

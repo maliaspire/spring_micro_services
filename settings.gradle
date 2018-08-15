@@ -1,4 +1,5 @@
 rootProject.name = 'spring_micro_services'
 include 'users', 'eureka_server'
 include 'zuul_proxy'
+include 'orders_service'
 

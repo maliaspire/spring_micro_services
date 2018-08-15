@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/eureka_server" />
+            <option value="$PROJECT_DIR$/orders_service" />
             <option value="$PROJECT_DIR$/users" />
             <option value="$PROJECT_DIR$/zuul_proxy" />
           </set>
