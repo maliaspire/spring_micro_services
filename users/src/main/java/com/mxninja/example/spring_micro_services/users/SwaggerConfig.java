@@ -30,9 +30,9 @@ public class SwaggerConfig {
     // Describe APIS
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("List of SAAR Backend Microservices APIS endpoint")
-                .license("SAAR Backend Microservices")
-                .description("List of SAAR Backend Microservices APIS endpoint ")
+                .title("List of Users Backend Microservices APIS endpoint")
+                .license("Users Backend Microservices")
+                .description("List of Users Backend Microservices APIS endpoint ")
                 .version("1.0")
                 .build();
 
