@@ -9,26 +9,6 @@ buildscript {
 }
 
 allprojects {
-    apply plugin: 'java'
-    apply plugin: 'idea'
-    apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
 
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
-
-    repositories {
-        jcenter()
-        mavenCentral()
-    }
-
-    group 'com.mxninja.example'
-    version '1.0-SNAPSHOT'
-
-    dependencyManagement {
-        imports {
-            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.SR1"
-        }
-    }
 
 }

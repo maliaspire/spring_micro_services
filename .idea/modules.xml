@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_server.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_server.iml" group="eureka_server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_main.iml" group="eureka_server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka_server/eureka_server_test.iml" group="eureka_server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/spring_micro_services.iml" filepath="$PROJECT_DIR$/.idea/modules/spring_micro_services.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/users.iml" filepath="$PROJECT_DIR$/.idea/modules/users.iml" group="users" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/users/users_main.iml" filepath="$PROJECT_DIR$/.idea/modules/users/users_main.iml" group="users" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/users/users_test.iml" filepath="$PROJECT_DIR$/.idea/modules/users/users_test.iml" group="users" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_proxy.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_proxy.iml" group="zuul_proxy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_proxy/zuul_proxy_main.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_proxy/zuul_proxy_main.iml" group="zuul_proxy" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zuul_proxy/zuul_proxy_test.iml" filepath="$PROJECT_DIR$/.idea/modules/zuul_proxy/zuul_proxy_test.iml" group="zuul_proxy" />
+    </modules>
+  </component>
+</project>

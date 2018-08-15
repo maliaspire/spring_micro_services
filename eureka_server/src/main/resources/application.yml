@@ -1,11 +1,9 @@
 server:
-  port: 8761
+  port: ${PORT:8761}
 
 eureka:
-  instance:
-    hostname: localhost
   client:
     registerWithEureka: false
-    fetchRegistry: true
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0

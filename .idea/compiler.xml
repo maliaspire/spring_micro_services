@@ -4,5 +4,15 @@
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka_server_main" target="1.8" />
+      <module name="eureka_server_test" target="1.8" />
+      <module name="spring_micro_services_main" target="1.8" />
+      <module name="spring_micro_services_test" target="1.8" />
+      <module name="users_main" target="1.8" />
+      <module name="users_test" target="1.8" />
+      <module name="zuul_proxy_main" target="1.8" />
+      <module name="zuul_proxy_test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

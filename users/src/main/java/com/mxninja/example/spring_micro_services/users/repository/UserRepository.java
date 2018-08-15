@@ -7,6 +7,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -17,8 +18,12 @@ import java.util.UUID;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
-    
+
     @Query("FROM User WHERE LOWER(email) = LOWER(:email)")
     User isExist(@NonNull @Param("email") String email);
+
+    User findByEmailContainingIgnoreCase(String email);
+
+    List<User> findAllByNameContainingIgnoreCase(String name);
 
 }

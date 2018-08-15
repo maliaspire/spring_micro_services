@@ -10,10 +10,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
+
+import java.util.List;
 
 /**
  * 8/14/2018
@@ -21,7 +21,8 @@ import reactor.core.publisher.Mono;
  * @author Mohammad Ali
  */
 
-@RestController("users")
+@RestController()
+@RequestMapping("/users")
 public class UserController {
 
     private final RegistrationService REGISTRATION_SERVICE;
@@ -31,6 +32,13 @@ public class UserController {
     public UserController(RegistrationService registrationService, UserRepository userRepository) {
         REGISTRATION_SERVICE = registrationService;
         USER_REPOSITORY = userRepository;
+    }
+
+    @RequestMapping(method = RequestMethod.GET, value = "/name/{name}")
+    public ResponseEntity<Mono<List<User>>> findByName(@PathVariable("name") String name) {
+        return new ResponseEntity<>(Mono.just(
+                USER_REPOSITORY.findAllByNameContainingIgnoreCase(name)
+        ), HttpStatus.ACCEPTED);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -46,7 +54,7 @@ public class UserController {
             return new ResponseEntity<>(Mono.just(false), HttpStatus.BAD_REQUEST);
         }
 
-        if (USER_REPOSITORY.isExist(body.getEmail()) != null) {
+        if (USER_REPOSITORY.findByEmailContainingIgnoreCase(body.getEmail()) != null) {
             return new ResponseEntity<>(Mono.just(false), HttpStatus.BAD_REQUEST);
         }
 
