@@ -1,5 +1,5 @@
 server:
-  port: ${saar.zuul_service.port}
+  port: ${sms.zuul_service.port}
 eureka:
   instance:
     preferIpAddress: true
@@ -7,13 +7,13 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
   serviceUrl:
-    defaultZone: ${saar.eureka.defaultZone}
+    defaultZone: ${sms.eureka.defaultZone}
 
 zuul:
   routes:
     usersService:
       path: /users-service/**
-      serviceId: ${saar.user_service.service.name}
+      serviceId: ${sms.user_service.service.name}
     ordersService:
       path: /orders-service/**
-      serviceId: ${saar.orders_service.service.name}
+      serviceId: ${sms.orders_service.service.name}

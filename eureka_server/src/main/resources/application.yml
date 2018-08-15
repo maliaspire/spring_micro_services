@@ -1,6 +1,5 @@
 server:
-  port: ${saar.eureka.port}
-
+  port: ${sms.eureka.port}
 eureka:
   client:
     registerWithEureka: false

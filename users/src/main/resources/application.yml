@@ -1,12 +1,32 @@
+server:
+  port: ${sms.user_service.port}
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${saar.eureka.defaultZone}
+      defaultZone: ${sms.eureka.defaultZone}
 
 ---
-spring:
-  profiles: cloud
 eureka:
   instance:
     hostname: ${APPLICATION_DOMAIN}
     nonSecurePort: 80
+spring:
+  profiles: cloud
+  jmx:
+    enabled: false
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: ${sms.user_service.postgre.password}
+    username: ${sms.user_service.postgre.username}
+    url: ${sms.user_service.postgre.url}
+    driver-class-name: org.postgresql.Driver
+  main:
+    allow-bean-definition-overriding: true
