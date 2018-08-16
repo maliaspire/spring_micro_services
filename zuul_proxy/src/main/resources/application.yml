@@ -1,5 +1,6 @@
 server:
-  port: ${sms.zuul_service.port}
+  port: ${sms.service.zuul.port}
+
 eureka:
   instance:
     preferIpAddress: true
@@ -13,7 +14,7 @@ zuul:
   routes:
     usersService:
       path: /users-service/**
-      serviceId: ${sms.user_service.service.name}
+      serviceId: ${sms.service.user.service.name}
     ordersService:
       path: /orders-service/**
-      serviceId: ${sms.orders_service.service.name}
+      serviceId: ${sms.service.orders.service.name}

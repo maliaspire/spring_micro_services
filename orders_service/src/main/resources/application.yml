@@ -1,13 +1,9 @@
 server:
-  port: ${sms.orders_service.port}
-spring:
-  profiles: cloud
-  data:
-    mongodb.uri: ${sms.orders_service.mongodb.uri}
+  port: ${sms.service.orders.port}
+
 eureka:
+  instance:
+    hostname: localhost
   client:
     serviceUrl:
       defaultZone: ${sms.eureka.defaultZone}
-  instance:
-    hostname: ${APPLICATION_DOMAIN}
-    nonSecurePort: 80

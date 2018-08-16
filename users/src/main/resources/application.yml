@@ -1,17 +1,14 @@
 server:
-  port: ${sms.user_service.port}
+  port: ${sms.service.user.port}
+
 eureka:
+  instance:
+    hostname: ${APPLICATION_DOMAIN}
   client:
     serviceUrl:
       defaultZone: ${sms.eureka.defaultZone}
 
----
-eureka:
-  instance:
-    hostname: ${APPLICATION_DOMAIN}
-    nonSecurePort: 80
 spring:
-  profiles: cloud
   jmx:
     enabled: false
   h2:
@@ -24,9 +21,9 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    password: ${sms.user_service.postgre.password}
-    username: ${sms.user_service.postgre.username}
-    url: ${sms.user_service.postgre.url}
+    password: ${sms.service.user.postgre.password}
+    username: ${sms.service.user.postgre.username}
+    url: ${sms.service.user.postgre.url}
     driver-class-name: org.postgresql.Driver
   main:
     allow-bean-definition-overriding: true
